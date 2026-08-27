@@ -1,0 +1,6 @@
+{
+  "name": "SmartBuy AI",
+  "description": "Intelligent AI-powered shopping assistant for discovering, comparing, and analyzing products with value scoring, sentiment intelligence, and smart buying recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
