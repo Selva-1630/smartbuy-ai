@@ -53,7 +53,8 @@ export const AuthModal: React.FC = () => {
         showToast('success', 'Welcome back to SmartBuy AI!');
       } else {
         await register(name, email, password);
-        showToast('success', 'Account created successfully! Welcome aboard.');
+        setTab('login');
+        showToast('success', 'Account created successfully! Please sign in to continue.');
       }
     } catch (err: any) {
       setError(err.message || 'Authentication failed. Please check your credentials.');

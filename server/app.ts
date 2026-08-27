@@ -12,8 +12,8 @@ import favoriteRoutes from './routes/favoriteRoutes.js';
 import historyRoutes from './routes/historyRoutes.js';
 import testRoutes from './routes/testRoutes.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const currentFilePath = typeof __filename === 'string' ? __filename : fileURLToPath(import.meta.url);
+const __dirname = path.dirname(currentFilePath);
 
 export const app = express();
 let isInitialized = false;

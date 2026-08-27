@@ -52,11 +52,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const register = async (name: string, email: string, pass: string) => {
-    const res = await api.register(name, email, pass);
-    localStorage.setItem('smartbuy_token', res.token);
-    setToken(res.token);
-    setUser(res.user);
-    setIsAuthModalOpen(false);
+    await api.register(name, email, pass);
+    localStorage.removeItem('smartbuy_token');
+    setToken(null);
+    setUser(null);
+    setAuthModalTab('login');
+    setIsAuthModalOpen(true);
   };
 
   const logout = () => {
